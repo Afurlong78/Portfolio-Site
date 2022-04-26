@@ -27,6 +27,7 @@ const MainProjectContainer = styled(motion.div)`
 
 const ProjectHeaderText = styled(motion.h1)`
     font-weight:700;    
+    font-family: 'Poppins', sans-serif;
 `
 
 const ProjectHeaderTextBorder = styled(motion.div)`
@@ -112,6 +113,7 @@ const ProjectCard1 = styled(motion.div)`
     align-items:start;
     flex-direction:column;
     border-radius:10px;
+
 
     background-image: linear-gradient(hsla(0, 0%, 0%, 0.7), rgba(0, 0, 0, 0.6)), url(${nearFall});
     background-size: cover;
