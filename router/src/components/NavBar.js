@@ -182,15 +182,7 @@ const MyNav = () =>{
          transition={{ duration: 0.5 }}
          variants={dropDown}
         >
-            
-            <NavLogo className=''
-             initial='hidden'
-             animate='visible'
-             transition={{ duration: 1.6 }}
-             variants={fadeLeft}
-            >
-                Andrew Furlong
-            </NavLogo>
+        
 
             <NavBrandContainer className='ms-5'
              initial='hidden'

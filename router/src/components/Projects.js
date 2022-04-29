@@ -12,6 +12,8 @@ const MainContainer = styled(motion.div)`
     height:93vh;
     width:100%;
 
+    position: relative;
+
     display:flex;
     justify-content:center;
     align-items:center;
@@ -20,7 +22,7 @@ const MainContainer = styled(motion.div)`
 
 const MainProjectContainer = styled(motion.div)`
     height:80%;
-    width: 75%;
+    width: 70%;
 
     margin:auto;
 `
@@ -35,7 +37,7 @@ const ProjectHeaderTextBorder = styled(motion.div)`
     width: 100%;
 `
 
-const ProjectsContainer = styled(motion.form)`
+const ProjectsContainer = styled(motion.div)`
     width:100%;
     height:40rem;
 
@@ -106,7 +108,7 @@ const ProjectsRow = styled(motion.div)`
 
 const ProjectCard1 = styled(motion.div)`
     height:18rem;
-    width:55%;
+    width:47%;
 
     display:flex;
     justify-content:center;
@@ -131,7 +133,7 @@ const ProjectCardDescription = styled(motion.p)`
 
 const ProjectCard2 = styled(motion.div)`
     height:18rem;
-    width:40%;
+    width:47%;
 
     display:flex;
     justify-content:center;
@@ -145,7 +147,7 @@ const ProjectCard2 = styled(motion.div)`
 
 const ProjectCard3 = styled(motion.div)`
     height:18rem;
-    width:40%;
+    width:47%;
 
     display:flex;
     justify-content:center;
@@ -159,7 +161,7 @@ const ProjectCard3 = styled(motion.div)`
 
 const ProjectCard4 = styled(motion.div)`
     height:18rem;
-    width:55%;
+    width:47%;
 
     display:flex;
     justify-content:center;
@@ -169,6 +171,40 @@ const ProjectCard4 = styled(motion.div)`
 
     background-image: linear-gradient(hsla(0, 0%, 0%, 0.7), rgba(0, 0, 0, 0.3)), url(${guStakes});
     background-size: cover;
+`
+//-----------------------------------------------------------------------------------------------------------//
+
+const Circle =  styled(motion.div)`
+    position:fixed;
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+
+    background-color:red;
+    top:100px;
+    left:30px;
+
+`
+const Circle1 =  styled(motion.div)`
+    position:fixed;
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+
+    background-color:blue;
+    top:400px;
+    left:30px;
+
+`
+
+const Rectangle = styled(motion.div)`
+    position:fixed;
+    width: 100px;
+    height: 200px;
+
+    background-color:yellow;
+    top:400px;
+    left:1700px;
 `
 
 
@@ -185,22 +221,54 @@ const Projects = () =>{
     const leftVariant = {
         hidden: {
             opacity:0,
-            // x:-300
+
+
         },
         visible:{
             opacity:1,
-            // x:0
+
+
+
+        }
+    }
+
+    const rectangle = {
+        hidden: {
+            opacity:0,
+            x:1300
+        },
+        visible:{
+            opacity:1,
+            x:0
+
+        }
+    }
+    const circles = {
+        hidden: {
+            opacity:0,
+            x:-1300
+
+
+        },
+        visible:{
+            opacity:1,
+            x:0
+
+
         }
     }
 
     const rightVariant = {
         hidden: {
             opacity:0,
-            // x:300
+
+
+
         },
         visible:{
             opacity:1,
-            // x:0
+
+
         }
     }
     
@@ -209,13 +277,38 @@ const Projects = () =>{
          variants={pageAnimation}
          exit='exit'
         >
+            <Circle
+             initial='hidden'
+             animate='visible'
+             variants={circles}
+             transition={{duration: 1}}
+            />
+
+            <Circle1
+             initial='hidden'
+             animate='visible'
+             variants={circles}
+             transition={{duration: 1}}
+            />
+
+            <Rectangle
+            initial='hidden'
+            animate='visible'
+            variants={rectangle}
+            transition={{duration: 1}}
+            />
+
+
+
+
             <MainProjectContainer className=''>
                 <ProjectHeaderText className='display-1'>
                     Projects & Resume
                 </ProjectHeaderText>
                 <ProjectHeaderTextBorder/>
 
-                <ProjectsContainer className=''>
+                <ProjectsContainer>    
+
                     <ProjectsRow className=' mt-4 '>
                         <ProjectCard1 className='shadow'
                          initial="hidden"
@@ -225,7 +318,7 @@ const Projects = () =>{
                          whileHover={{ scale: 1.05, transition:{ duration: 0.2 } }}
                         >
                             <ProjectCardTextHeader className='ms-3 mb-4 display-5'>
-                                The NearFall Fishing Charter
+                                The NearFall
                             </ProjectCardTextHeader>
                             <ProjectCardDescription className='ms-3 mb-4 me-3'>
                             The NearFall Fishing is my first professional experience. I was brought onto this project to assist in developing the theme of the site and create the front end.
@@ -235,12 +328,14 @@ const Projects = () =>{
                                 <ProjectCardBtn className='ms-3'
                                  whileHover={{ scale: 1.15, transition:{ duration: 0.2 } }}
                                  href='https://www.nearfallfishingcharters.com/'
+                                 target='_blank'
                                 >
-                                    View Project
+                                    <strong>View Project</strong>
                                 </ProjectCardBtn>
                                 <ProjectCardBtnIcon className='ms-5'
                                  whileHover={{ scale: 1.15, transition:{ duration: 0.2 } }}
                                  href='https://github.com/saltoriousSIG/nearFallFrontEnd'
+                                 target='_blank'
                                 >
                                     <BsGithub/>
                                 </ProjectCardBtnIcon>
@@ -265,7 +360,7 @@ const Projects = () =>{
                                 <ProjectCardBtn className='ms-3'
                                  whileHover={{ scale: 1.15, transition:{ duration: 0.2 } }}
                                 >
-                                    View Project
+                                    <strong>View Project</strong>
                                 </ProjectCardBtn>
                                 <ProjectCardBtnIcon className='ms-5'
                                  whileHover={{ scale: 1.15, transition:{ duration: 0.2 } }}
@@ -297,7 +392,7 @@ const Projects = () =>{
                                 <ProjectCardBtn className='ms-3'
                                  whileHover={{ scale: 1.15, transition:{ duration: 0.2 } }}
                                 >
-                                    View Project
+                                    <strong>View Project</strong>
                                 </ProjectCardBtn>
                                 <ProjectCardBtnIcon className='ms-5'
                                  whileHover={{ scale: 1.15, transition:{ duration: 0.2 } }}
@@ -325,8 +420,9 @@ const Projects = () =>{
                                 <ProjectCardBtn className='ms-3'
                                  whileHover={{ scale: 1.15, transition:{ duration: 0.2 } }}
                                  href="https://gustakes.gg/"
+                                 target='_blank'
                                 >
-                                    View Project
+                                    <strong>View Project</strong>
                                 </ProjectCardBtn>
                                 <ProjectCardBtnIcon className='ms-5'
                                  whileHover={{ scale: 1.15, transition:{ duration: 0.2 } }}

@@ -5,12 +5,26 @@ import styled from 'styled-components';
 
 const MainContainer = styled(motion.div)`
     height:93vh;
-    width:100%;
+    width:75%;
 
     display:flex;
+    flex-direction:column;
     justify-content:center;
-    align-items:center;
+    align-items:start;
     overflow:hidden;
+
+    margin:auto;
+`
+
+const ContactHeaderText = styled(motion.h1)`
+font-family: 'Poppins', sans-serif;
+font-weight:700;
+
+`
+
+const ContactHeaderTextBorder = styled(motion.div)`
+    border: 1px solid black;
+    width:100%;
 `
 
 
@@ -32,7 +46,11 @@ const Contact = () =>{
          exit='exit'
          
         >
-         hello
+            <ContactHeaderText className='display-1'>
+                Contact Me
+            </ContactHeaderText>
+            <ContactHeaderTextBorder/>
+
         </MainContainer>
     );
 }

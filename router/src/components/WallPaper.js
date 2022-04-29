@@ -16,20 +16,22 @@ import lightredrectangle from '../assets/lightredrectangle.png';
 
 
 const Canvas =styled(motion.div)`
-    height:100vh;
-    width:100%;
-    overflow:hidden;
-    position:absolute;
-    top:0;
-    left:0;
-    margin:0;
-    padding:0;
+  height:100vh;
+  width:100%;
+  overflow:hidden;
+  position:absolute;
+  top:0;
+  left:0;
+  margin:0;
+  padding:0;
 `
 
 const TheFGT = styled(motion.div)`
   position:fixed;
   margin-top:210px;
   margin-left: 300px;
+
+  
 
   height: 0;
   width: 0;
