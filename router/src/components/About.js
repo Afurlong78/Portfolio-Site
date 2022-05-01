@@ -2,37 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Styled from './Global/GlobalStyle';
 
-
-const MainContainer = styled(motion.div)`
-    overflow:hidden;
-    overflow-y:hidden;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-`
-
-const ContentContainer = styled(motion.div)`
-    height:100vh;
-    width:70%;
-
-    margin-top:-60px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:start;
-
-    @media all and (max-width:1550px){
-        height:100%;
-        justify-content:start;
-    }
-
-    @media all and (max-height:805px){
-        height:100%;
-    }
-
-`
 
 
 const AboutMeBtnLink = styled(Link)`
@@ -190,8 +161,8 @@ const About = () =>{
     
 
     return(
-        <MainContainer variants={aboutExitAnimation} exit="exit" className='' >
-            <ContentContainer>
+        <Styled.MainContainer variants={aboutExitAnimation} exit="exit" className='' >
+            <Styled.ContentContainer>
             <AboutHeaderText className='display-1'>
                 About Me
             </AboutHeaderText>
@@ -256,8 +227,8 @@ const About = () =>{
                     </AboutMeSkillsContent>
                 </AboutMeSkillsContainer>
             </AboutContentContainer>
-            </ContentContainer>
-        </MainContainer>
+            </Styled.ContentContainer>
+        </Styled.MainContainer>
     );
 }
 
