@@ -14,7 +14,6 @@ const CustomNav = styled(motion.Navbar)`
     flex-direction: row;
     align-items:center;
     height:60px;
-    
 `
 const NavLinks = styled(motion.NavLink)`
     color:white;

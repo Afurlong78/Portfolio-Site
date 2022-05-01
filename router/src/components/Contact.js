@@ -4,29 +4,25 @@ import styled from 'styled-components';
 
 
 const MainContainer = styled(motion.div)`
-    height:93vh;
-    width:75%;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:start;
-    overflow:hidden;
-
-    margin:auto;
+overflow:hidden;
+overflow-y:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
 `
 
-const ContactHeaderText = styled(motion.h1)`
-font-family: 'Poppins', sans-serif;
-font-weight:700;
+const ContentContainer = styled(motion.div)`
+height:100vh;
+width:70%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:start;
 
+margin-top:-60px;
+
+background:red;
 `
-
-const ContactHeaderTextBorder = styled(motion.div)`
-    border: 1px solid black;
-    width:100%;
-`
-
 
 
 
@@ -44,13 +40,13 @@ const Contact = () =>{
         <MainContainer 
          variants={pageAnimation}
          exit='exit'
-         
+         className=''
         >
-            <ContactHeaderText className='display-1'>
-                Contact Me
-            </ContactHeaderText>
-            <ContactHeaderTextBorder/>
+            <ContentContainer>
 
+            
+        hello
+        </ContentContainer>
         </MainContainer>
     );
 }

@@ -6,23 +6,32 @@ import styled from 'styled-components';
 
 const MainContainer = styled(motion.div)`
     overflow:hidden;
+    overflow-y:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+`
 
+const ContentContainer = styled(motion.div)`
+    height:100vh;
     width:70%;
-    height:93vh;
 
-    margin:auto;
+    margin-top:-60px;
 
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:start;
-    
 
     @media all and (max-width:1550px){
-        height:1400px;
+        height:100%;
         justify-content:start;
-
     }
+
+    @media all and (max-height:805px){
+        height:100%;
+    }
+
 `
 
 
@@ -54,6 +63,10 @@ font-family: 'Poppins', sans-serif;
     border:2px solid #1E1E1E;
     color:#1E1E1E;
     transition: 0.15s ease-in-out;
+}
+
+@media all and (max-width:)
+
 `
 
 const AboutHeaderText = styled(motion.h1)`
@@ -63,6 +76,13 @@ const AboutHeaderText = styled(motion.h1)`
     @media all and (max-width:1550px){
         margin-top:5rem;
     }
+
+    @media all and (max-height:805px){
+       margin-top:60px;
+    }
+
+    
+
 
 `
 
@@ -83,6 +103,7 @@ const AboutContentContainer = styled(motion.div)`
 
     @media all and (max-width:1550px){
         flex-direction:column;
+        height:fit-content;
     }
 
 `
@@ -104,6 +125,10 @@ const AboutMeTextContainer = styled(motion.div)`
         margin:auto;
         width:100%;
 
+    }
+
+    @media all and (max-width: 946px){
+        height:fit-content;
     }
 `
 
@@ -144,6 +169,10 @@ const AboutMeSkillsContent = styled.li`
     justify-content:center;
     align-items:center;
     height:30rem;
+
+    @media all and (max-width:321px){
+        font-size:1rem;
+    }
 `
 
 
@@ -162,6 +191,7 @@ const About = () =>{
 
     return(
         <MainContainer variants={aboutExitAnimation} exit="exit" className='' >
+            <ContentContainer>
             <AboutHeaderText className='display-1'>
                 About Me
             </AboutHeaderText>
@@ -226,6 +256,7 @@ const About = () =>{
                     </AboutMeSkillsContent>
                 </AboutMeSkillsContainer>
             </AboutContentContainer>
+            </ContentContainer>
         </MainContainer>
     );
 }

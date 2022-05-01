@@ -1,75 +1,88 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'reactstrap';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import WallPaper from './WallPaper';
 
-const HeroContainer = styled(Container)`
-  height:85vh;
+const HeroContainer = styled(motion.div)`
   overflow:hidden;
   overflow-y:hidden;
   letter-spacing: 2px;
   font-family: 'Poppins', sans-serif;
-  
-  h1{
-    z-index:20;
-    filter: drop-shadow(30px 20px 4px rgba(0, 0, 0, 0.2));
-    font-weight:700;
-  }
 
-  h1{
-    @media all and (max-width:980px){
-      font-size:55px;
-      padding:0;
-      margin:0;
-    }
-  }
-
-  h1{
-    @media all and (max-width:800px){
-      display:flex;
-      justify-content:center;
-      align-items:center ;
-      margin-right:auto;
-      margin-left:auto;
-      font-size:40px;
-      letter-spacing: 0px; 
-      filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.2));
-    }
-
-    @media all and (max-width:420px){
-      font-size:30px;
-      padding-bottom:10px;
-    }
-  }
-
-  p{ 
-    filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, 0.2))
-    font-weight: 700;
-  }
-
-  p{
-    z-index:998;
-
-    @media all and (max-width:800px){
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      font-size:25px;
-      margin-right:auto;
-      margin-left:auto;
-      filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.2));
-    }
-
-    @media all and (max-width:420px){
-      font-size:19px;
-    }
-  }
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 
 
 `
+
+const HeroTextContainer = styled(motion.div)`
+height:100vh;
+width:70%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:start;
+
+margin-top:-60px;
+
+h1{
+  z-index:20;
+  filter: drop-shadow(30px 20px 4px rgba(0, 0, 0, 0.2));
+  font-weight:700;
+}
+
+h1{
+  @media all and (max-width:980px){
+    font-size:55px;
+    padding:0;
+    margin:0;
+  }
+}
+
+h1{
+  @media all and (max-width:800px){
+    font-size:40px;
+    letter-spacing: 0px; 
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.2));
+  }
+
+  @media all and (max-width:420px){
+    font-size:30px;
+    padding-bottom:10px;
+  }
+
+  @media all and (max-width:330px){
+    font-size:22px;
+  }
+}
+
+p{ 
+  filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, 0.2))
+  font-weight: 700;
+}
+
+p{
+  z-index:998;
+
+  @media all and (max-width:800px){
+    font-size:25px;
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.2));
+  }
+
+  @media all and (max-width:420px){
+    font-size:19px;
+  }
+  @media all and (max-width:330px){
+    font-size:14px;
+  }
+}
+
+`
+
 const HeroBtn = styled(motion.button)`
     height:5rem;
     width:15rem;
@@ -93,22 +106,37 @@ const HeroBtn = styled(motion.button)`
     }
 
     @media all and (max-width:800px){
-      display:flex;
-      justify-content:center;
-      width:13rem;
-      align-items:center;
-      margin-right:auto;
-      margin-left:auto;
+      height:4rem;
+      width:10rem;
+      font-size:1.5rem;
     }
+
   
     @media all and (max-width:420px){
       width:9rem;
       font-size:1.5rem;
     }
+
+    @media all and (max-width:330px){
+      font-size:1rem;
+
+      width: 7rem;
+      height: 3.5rem;
+    }
 `
 const HeroBtnLink = styled(Link)`
     z-index:5;
     
+`
+
+const HeroBtnRow = styled.div`
+    width:100%;
+    display:flex;
+
+    @media all and (max-width:800px){
+  
+    }
+
 `
 
 function Hero() {
@@ -141,14 +169,14 @@ function Hero() {
   }
 
   return (
-    <motion.div
+    <HeroContainer
       exit="exit"
       variants={pageAnimation}
+      className=''
     >
 
     <WallPaper/>
-  
-    <HeroContainer className='d-flex flex-column justify-content-center align-items-start mt-5 pt-5'>
+    <HeroTextContainer className=''>
       <motion.h1 className='display-2 pt-5 mt-5'
        initial='hidden'
        animate='visible'
@@ -173,7 +201,8 @@ function Hero() {
       >
       Lets Make Something Amazing!
       </motion.p>
-      <Container className='d-flex flex-row  pt-2 ps-1'>
+
+      <HeroBtnRow className=''>
 
         <HeroBtnLink to='/projects'>
         <HeroBtn className='shadow'
@@ -201,10 +230,10 @@ function Hero() {
         </HeroBtn>
         </HeroBtnLink>
 
-      </Container>
-    </HeroContainer>
+      </HeroBtnRow>
+      </HeroTextContainer>
     
-    </motion.div>
+    </HeroContainer>
   );
 }
 
