@@ -4,6 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import WallPaper from './WallPaper';
+import nearFall from '../assets/Projects/NearFall.jpg';
+import weather from '../assets/Projects/weather.jpg';
+import guStakes from '../assets/ProjectCard3.PNG';
+import omniFoods from '../assets/Projects/omnifoods.jpg';
 
 const HeroContainer = styled(motion.div)`
   overflow:hidden;
@@ -66,7 +70,7 @@ p{
 }
 
 p{
-  z-index:998;
+  z-index:1;
 
   @media all and (max-width:800px){
     font-size:25px;

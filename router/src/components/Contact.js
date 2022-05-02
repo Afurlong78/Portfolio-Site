@@ -1,28 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
-
-const MainContainer = styled(motion.div)`
-overflow:hidden;
-overflow-y:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
-`
-
-const ContentContainer = styled(motion.div)`
-height:100vh;
-width:70%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:start;
-
-margin-top:-60px;
-
-background:red;
-`
+import Styled from './Global/GlobalStyle';
 
 
 
@@ -37,17 +17,17 @@ const Contact = () =>{
     }
     
     return(
-        <MainContainer 
+        <Styled.MainContainer
          variants={pageAnimation}
          exit='exit'
          className=''
         >
-            <ContentContainer>
-
-            
-        hello
-        </ContentContainer>
-        </MainContainer>
+            <Styled.HeaderText className='display-1'>
+            Contact Me
+            </Styled.HeaderText>
+            <Styled.HeaderTextBorderBottom/>
+        
+        </Styled.MainContainer>
     );
 }
 

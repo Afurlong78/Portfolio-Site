@@ -2,173 +2,185 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Styled from './Global/GlobalStyle';
 
 
-
-const AboutMeBtnLink = styled(Link)`
-    text-decoration:none;
-`
-
-const AboutMeBtn = styled(motion.button)`
-height:5rem;
-width:20rem;
-border:2px solid black;
-font-size:1.5rem;
-font-weight:700;
-letter-spacing:0.8px;
-color:white;
-background-color:black;
-border-radius:16px;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-text-decoration:none;
-
-font-family: 'Poppins', sans-serif;
-
-&:hover{
-    background-color:transparent;
-    border:2px solid #1E1E1E;
-    color:#1E1E1E;
-    transition: 0.15s ease-in-out;
-}
-
-@media all and (max-width:)
-
-`
-
-const AboutHeaderText = styled(motion.h1)`
-    font-weight:700;
-    font-family: 'Poppins', sans-serif;
-
-    @media all and (max-width:1550px){
-        margin-top:5rem;
-    }
-
-    @media all and (max-height:805px){
-       margin-top:60px;
-    }
-
-    
-
-
-`
-
-const AboutHeaderTextBorder = styled(motion.div)`
-    border:1px solid black;
-    width:100%;
-
-    
-`
-
-const AboutContentContainer = styled(motion.div)`
-    height: 38rem;
-    width:100%;
-
+const MainContainer = styled(motion.div)`
+    height:100%;
+    width:70%;
+   
+    margin: 0 auto;
+    margin-top:100px;
 
     display:flex;
-    justify-content:space-between;
-
-    @media all and (max-width:1550px){
-        flex-direction:column;
-        height:fit-content;
-    }
-
-`
-
-const AboutMeTextContainer = styled(motion.div)`
-    height: 38rem;
-    width:60%;
-
-    display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:start;
-    flex-direction:column;
+
+`
+
+const HeaderText = styled(motion.h1)`
+    font-weight:700;
+    font-family: 'Poppins', sans-serif;
+`
+
+const SubHeaderText = styled(motion.h3)`
+    font-weight:700;
+    font-family: 'Poppins', sans-serif;
+    margin-top:15px;
+`
+
+const HeaderTextBorderBottom = styled(motion.div)`
+    width:100%;
+    border:1px solid black;
+`
+
+const SubHeaderTextBorderBottom = styled(motion.div)`
+    width:100%;
+    border:1px solid black;
+`
+
+const ContentRow = styled(motion.div)`
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    width:100%;
+
+    @media all and (max-width:1024px){
+        flex-direction:column;
+    }
+`
+
+const SplitContentContainer = styled(motion.div)`
+    height:40rem;
+    width:45%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:1.1rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing:0.8px;
+`
+
+const DominantContentContainer = styled(motion.div)`
+    height:40rem;
+    width:55%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:1.1rem;
     font-family: 'Poppins', sans-serif;
     letter-spacing:0.8px;
 
+    
+`
+const DominantTextContentContainer = styled(motion.div)`
+    height:fit-content;
+    width:55%;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+
     font-size:1.1rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing:0.8px;
 
-    @media all and (max-width:1550px){
-        margin:auto;
-        width:100%;
+    margin-top:20px;
 
-    }
-
-    @media all and (max-width: 946px){
-        height:fit-content;
+    @media all and (max-width:1024px){
+        width:95%;
     }
 `
 
-const AboutMeSkillsContainer = styled(motion.div)`
-    height: 38rem;
+const SubContentContainer = styled(motion.div)`
+    height:40rem;
     width:35%;
 
     display:flex;
-    align-items:center;
-    justify-content:center;
     flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
 
-    @media all and (max-width:1550px){
-        margin:auto;
-        width:100%;
-        margin-top:3rem;
-    }
-
-`
-
-const AboutMeSkillsHeader = styled(motion.h2)`
-    font-family: 'Poppins', sans-serif;
-    letter-spacing:0.8px;
-`
-
-const AboutMeSkillsHeaderBorder = styled(motion.div)`
-    width:100%;
-    border:1px solid black;
-`
-
-const AboutMeSkillsContent = styled.li`
-    font-family: 'Poppins', sans-serif;
-    letter-spacing:0.8px;
     font-size:1.3rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing:0.8px;
+
+    @media all and (max-width:1024px){
+        width:95%;
+        margin-bottom:30px;
+    }
+`
+
+const PageBtn = styled(motion.button)`
+    height:5rem;
+    width:15rem;
+
+    background:black;
+    border:none;
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+
+    border-radius: 10px;
 
     display:flex;
-    flex-direction: column;
     justify-content:center;
     align-items:center;
-    height:30rem;
 
-    @media all and (max-width:321px){
-        font-size:1rem;
+    margin-bottom:25px;
+
+    &:hover{
+        border:2px solid black;
+        background:transparent;
+        color:black;
     }
+
+    @media all and (max-width:1024px){
+        margin-bottom:20px;
+    }
+
 `
 
-
-//--------------------------------------------------WallPaper---------------------------------------------//
-
+const PageBtnLink = styled(Link)`
+    text-decoration:none;
+`
 
 
 
 const About = () =>{
 
-    const aboutExitAnimation={
-        exit:{x:'100vw', transition:{duration:1} }
+    const pageAnimation={
+        exit:{
+            x:`100vw`,
+            opacity:0,
+            transition:{duration: 1 }
+        }
     }
 
-    
+    const btnVariant={
 
+    }
+    
     return(
-        <Styled.MainContainer variants={aboutExitAnimation} exit="exit" className='' >
-            <Styled.ContentContainer>
-            <AboutHeaderText className='display-1'>
+        <MainContainer
+         variants={pageAnimation}
+         exit='exit'
+         className=''
+        >
+            <HeaderText className='display-1'>
                 About Me
-            </AboutHeaderText>
-            <AboutHeaderTextBorder />
-            <AboutContentContainer className=''>
-                <AboutMeTextContainer className=''>
+            </HeaderText>
+            <HeaderTextBorderBottom/>
+
+            <ContentRow>
+
+                <DominantTextContentContainer className=''>
                 My name is Andrew Furlong and I've always been fascinated by technology and passionate about learning how to use it - for fun and to find ways to make work easier and life better.  These interests have drawn me to the field of web development.   I love to solve problems and create amazing applications and user experiences!
                     <br/>
                     <br/>
@@ -178,25 +190,25 @@ const About = () =>{
                 When I am not developing websites and applications you can find me watching a sports game or on a walk with my dog, Woodie.
                     <br/>
                     <br/>
-                <AboutMeBtnLink to='/projects' className='mx-auto'>
-                <AboutMeBtn className='shadow'
-                 whileHover={{ scale: 1.1, transition:{ duration: 0.2 } }}
-                 whileTap={{ scale: 1, transition:{duration: 0.01 }}}
-                 transition={{ duration: 1 }}
-                > 
-                    Check Out My Work
-                </AboutMeBtn>
-                </AboutMeBtnLink>
 
-                </AboutMeTextContainer>
+                    <PageBtnLink to='/projects'>
+                    <PageBtn 
+                     whileHover={{scale:1.2}}
+                     whileTap={{scale:0.9}}
+                    >
+                        <strong>Check Out My Work</strong>
+                    </PageBtn>
+                    </PageBtnLink>
 
-                <AboutMeSkillsContainer className=''>
-                    <AboutMeSkillsHeader className=''>
-                        <strong>SKILL SET</strong>
-                    </AboutMeSkillsHeader>
-                    <AboutMeSkillsHeaderBorder className='mb-4'/>
+                </DominantTextContentContainer>
 
-                    <AboutMeSkillsContent>
+                <SubContentContainer className=''>
+
+                    <SubHeaderText>
+                        Skill Set
+                    </SubHeaderText>
+
+                    <SubHeaderTextBorderBottom/>
                         <div className='mb-4'>
                         Javascript
                         </div>
@@ -224,11 +236,11 @@ const About = () =>{
                         <div className='mb-4'>
                         React-Redux
                         </div>
-                    </AboutMeSkillsContent>
-                </AboutMeSkillsContainer>
-            </AboutContentContainer>
-            </Styled.ContentContainer>
-        </Styled.MainContainer>
+                </SubContentContainer>
+
+            </ContentRow>
+
+        </MainContainer>
     );
 }
 

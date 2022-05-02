@@ -14,14 +14,23 @@ const CustomNav = styled(motion.Navbar)`
     flex-direction: row;
     align-items:center;
     height:60px;
+    
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:100;
 `
 const NavLinks = styled(motion.NavLink)`
     color:white;
     font-family: 'Poppins', sans-serif;
     letter-spacing:1px;
     font-weight:100;
+
+    z-index:101;
   
-    @media all and (max-width: 800px){
+    @media all and (max-width: 1024px){
         display:none;
     }
     
@@ -35,7 +44,9 @@ const NavRouterLink = styled(Link)`
     position:relative;
     letter-spacing:0.8px;
 
-    @media all and (max-width: 800px){
+    z-index:102;
+
+    @media all and (max-width: 1024px){
     display:none;
     }
 
@@ -104,7 +115,7 @@ const NavDropDown = styled(motion.Button)`
     display:none;
     z-index:1000;
 
-    @media all and (max-width: 800px){
+    @media all and (max-width: 1024px){
         display:block;
     }
 `
@@ -122,7 +133,7 @@ const SideBar = styled(motion.div)`
   right:0;
   z-index:999;
 
-  @media all and (min-width: 800px){
+  @media all and (min-width: 1024px){
     display:none;
  }
 `
