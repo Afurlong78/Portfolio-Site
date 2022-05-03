@@ -1,10 +1,10 @@
 import React from 'react';
 import {Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import Hero from './Hero';
-import AboutMe from "./About";
-import Projects from './Projects';
-import Contact from './Contact';
+import Hero from '../Hero/Hero';
+import AboutMe from "../About/About";
+import Projects from '../Projects/Projects';
+import Contact from '../Contact/Contact';
 
 const AnimatedRoutes = () =>{
 

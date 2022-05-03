@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { IoMenu } from "react-icons/io5";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Outlet, Link } from 'react-router-dom';
-import AboutMe from './About';
 
 const CustomNav = styled(motion.Navbar)`
     background-color:#1E1E1E;

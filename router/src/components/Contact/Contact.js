@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Styled from './Global/GlobalStyle';
+import Styled from '../Global/GlobalStyle'
+
 
 
 
 const Contact = () =>{
 
+    /* ANIMATIONS */
     const pageAnimation={
         exit:{
             x:`-100vw`,
@@ -15,6 +17,9 @@ const Contact = () =>{
             transition:{duration: 1 }
         }
     }
+    
+    /* ANIMATIONS */
+    
     
     return(
         <Styled.MainContainer
