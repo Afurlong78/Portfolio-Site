@@ -25,7 +25,7 @@ export const FilledBlueCircle = styled(motion.div)`
   border-radius:50%;
 
   top:170px;
-  left:900px;
+  left:850px;
 
   background: #7E94FF;
 `
@@ -154,7 +154,7 @@ export const FilledLightGreenTriangle = styled(motion.div)`
   position:fixed;
 
   top: 200px;
-  left: 1250px;
+  left: 1200px;
 
   height: 0;
   width: 0;

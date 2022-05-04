@@ -176,6 +176,15 @@ const Projects = () =>{
         }
     }
 
+    const headerTextVariant = {
+        hidden:{
+            opacity: 0
+        },
+        visible:{
+            opacity: 1
+        }
+    }
+
     /* ANIMATIONS */
 
     return(
@@ -183,11 +192,22 @@ const Projects = () =>{
          variants={pageAnimation}
          exit='exit'
         >
-            <Styled.HeaderText className='display-1'>
+            <Styled.HeaderText className='display-1'
+             initial='hidden'
+             animate='visible'
+             variants={headerTextVariant}
+             transition={{ duration: 1 }}
+            >
                 Projects & Resume
             </Styled.HeaderText>
-            <Styled.HeaderTextBorderBottom/>
-            <Styled.ContentRow className='mb-3'>
+            <Styled.HeaderTextBorderBottom
+             initial='hidden'
+             animate='visible'
+             variants={headerTextVariant}
+             transition={{ duration: 1 }}
+            />
+
+            <Styled.ProjectsContentRow className='mt-5 mb-3'>
 
                 <NearFallCard className='shadow'
                  whileHover={{scale:1.05, transition:{ duration: 0.2 }}}
@@ -249,8 +269,9 @@ const Projects = () =>{
                     </ProjectCardBtnRow>
 
                 </WelcomeWeatherCard>
-            </Styled.ContentRow>
-            <Styled.ContentRow className='mb-5'>
+            </Styled.ProjectsContentRow>
+
+            <Styled.ProjectsContentRow className='mt-3 mb-5'>
                 <BetterBudgetCard className='shadow'
                  whileHover={{scale:1.05, transition:{ duration: 0.2 }}}
                  initial='hidden'
@@ -307,7 +328,9 @@ const Projects = () =>{
                     </ProjectCardBtnRow>
 
                 </GUStakesCard>
-            </Styled.ContentRow>
+
+            </Styled.ProjectsContentRow>
+
         </Styled.MainContainer>
     );
 }

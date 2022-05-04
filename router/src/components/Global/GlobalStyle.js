@@ -35,9 +35,26 @@ const HeaderTextBorderBottom = styled(motion.div)`
 const SubHeaderTextBorderBottom = styled(motion.div)`
     width:100%;
     border:1px solid black;
+
+    @media all and (max-width:1700px){
+        width: 70%;
+    }
 `
 
 const ContentRow = styled(motion.div)`
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+
+    width:100%;
+
+    @media all and (max-width:1700px){
+        flex-direction:column;
+    }
+`
+
+const ProjectsContentRow = styled(motion.div)`
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -50,6 +67,7 @@ const ContentRow = styled(motion.div)`
         flex-direction:column;
     }
 `
+
 const SplitContentContainer = styled(motion.div)`
     height:40rem;
     width:45%;
@@ -90,28 +108,29 @@ const DominantTextContentContainer = styled(motion.div)`
     font-family: 'Poppins', sans-serif;
     letter-spacing:0.8px;
 
-    margin-top:20px;
+    margin-top:40px;
 
-    @media all and (max-width:1024px){
+    @media all and (max-width:1700px){
         width:95%;
     }
 `
 
 const SubContentContainer = styled(motion.div)`
-    height:40rem;
+    height:100%;
     width:35%;
 
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:space-between;
+    justify-content:center;
 
     font-size:1.3rem;
     font-family: 'Poppins', sans-serif;
     letter-spacing:0.8px;
 
-    @media all and (max-width:1024px){
+    @media all and (max-width:1700px){
         width:95%;
+        height:50%;
     }
 `
 
@@ -139,7 +158,7 @@ const PageBtn = styled(motion.button)`
         color:black;
     }
 
-    @media all and (max-width:1024px){
+    @media all and (max-width:1700px){
         margin-bottom:20px;
     }
 
@@ -163,7 +182,8 @@ const Styled = {
     DominantTextContentContainer,
     SubContentContainer,
     PageBtnLink,
-    PageBtn
+    PageBtn,
+    ProjectsContentRow
 }
 
 export default Styled;

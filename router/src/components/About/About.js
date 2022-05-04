@@ -71,7 +71,7 @@ const About = () =>{
         >
             
             {/* BACKGROUND SHAPES */}
-                <PurpleSquare 
+                {/* <PurpleSquare 
                  style={{rotate:'25deg'}}
                  initial='hidden'
                  animate='visible'
@@ -104,7 +104,7 @@ const About = () =>{
                  animate='visible'
                  transition={{duration: 1 }}
                  variants={fadeUp}
-                 />
+                 /> */}
             {/* BACKGROUND SHAPES */}
 
             <Styled.HeaderText className='display-1'>
@@ -138,12 +138,12 @@ const About = () =>{
 
                 <Styled.SubContentContainer className=''>
 
-                    <Styled.SubHeaderText>
+                    <Styled.SubHeaderText className='mb-4'>
                         Skill Set
                     </Styled.SubHeaderText>
 
                     <Styled.SubHeaderTextBorderBottom/>
-                        <div className='mb-4'>
+                        <div className='mt-4 mb-4'>
                         Javascript
                         </div>
                         <div className='mb-4'>
