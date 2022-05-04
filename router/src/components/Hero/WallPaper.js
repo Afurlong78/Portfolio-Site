@@ -3,11 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-
-
-export const TheFGT = styled(motion.div)`
+export const FilledGreenTriangle = styled(motion.div)`
   position:fixed;
-  top:180px;
+  top: 170px;
   left: 300px;
 
   height: 0;
@@ -18,135 +16,206 @@ export const TheFGT = styled(motion.div)`
   border-bottom: 350px solid #89E5A4;
 `
 
-export const Purplehexagon = styled(motion.img)`
- position:fixed;
- width:100%;
- height:100%;
- max-width: 200px;
- max-height: 200px;
-
- margin-top:120px;
- margin-left: 90px;
-`
-
-export const Yellowrectangle = styled(motion.img)`
- position:fixed;
- width:100%;
- height:100%;
- max-width: 520px;
- min-width: 520px;
- max-height: 520px;
- min-height: 520px;
- z-index:-2;
-
- margin-left: 600px;
- margin-top: 160px;
-`
-
-
-export const TheFBC = styled(motion.div)`
+export const FilledBlueCircle = styled(motion.div)`
   position:fixed;
-  width:100%;
-  height:100%;
-  max-width: 180px;
-  max-height: 180px;
+
+  width:200px;
+  height:200px;
+
   border-radius:50%;
 
-  top:180px;
+  top:170px;
   left:900px;
 
   background: #7E94FF;
 `
 
-export const Redrectangle = styled(motion.img)`
- overflow:hidden;
- position:absolute;
- position:fixed;
- width:100%;
- height:100%;
- max-width: 800px;
- min-width: 800px;
- max-height: 240px;
- min-height: 240px;
- z-index: -2;
+export const BlueRectangle = styled(motion.div)`
+  position:fixed;
 
- margin-top:100px;
- margin-left:700px;
+  top: 700px;
+  left:700px;
+
+  width: 700px;
+  height: 80px;
+
+  border: 10px solid #C9C5FF;
 `
 
-export const Lightbluetriangle = styled(motion.img)`
-position:fixed;
-width:100%;
-height:100%;
-max-width: 450px;
-max-height: 450px;
+export const RedRectangle = styled(motion.div)`
+  position:fixed;
 
+  top:620px;
+  left:80px;
 
-margin-top: 100px;
-margin-left: 1350px;
+  width: 300px;
+  height:200px;
+
+  border:6px solid #FF6A6A;
 `
 
-export const Filledpinksquare = styled(motion.img)`
-position:fixed;
-width:100%;
-height:100%;
-max-width: 150px;
-max-height: 150px;
-z-index:10;
+export const OrangeCircle = styled(motion.div)`
+  position:fixed;
 
-margin-top:130px;
-margin-left: 1650px;
+  width:150px;
+  height:150px;
+
+  border-radius:50%;
+
+  border:8px solid #FFECBA;
+
+  top:110px;
+  left:70px;
+
 `
 
-export const Filledorangepentagon = styled(motion.img)`
-position:fixed;
-width:100%;
-height:100%;
-max-width: 300px;
-max-height:300px;
+export const YellowRectangle = styled(motion.div)`
+  position:fixed;
 
-margin-top:600px;
-margin-left:1600px;
-z-index:1;
+  width:400px;
+  height:500px;
+ 
+  z-index:-2;
+
+  border:4px solid #FBFF87;
+
+  left: 600px;
+  top: 160px;
 `
 
+export const PurpleRectangle = styled(motion.div)`
+  position:fixed;
 
-export const TheFBR = styled(motion.div)`
- position:fixed;
+  width:70px;
+  height:500px;
 
- top: 700px;
- left:700px;
+  border:4px solid #E06CF6;
 
- width: 700px;
- height: 80px;
+  left: -40px;
+  top: 30px;
 
- background: #C9C5FF;
 `
 
-export const Purplecircle = styled(motion.img)`
-position:fixed;
-width:100%;
-height:100%
-min-width:300px;
-min-height:300px;
-max-width: 300px;
-max-height: 300px;
+export const FilledBlueTriangle = styled(motion.div)`
+  position:fixed;
 
-margin-top:590px;
-margin-left:1250px;
+  top: 850px;
+  left: 420px;
+
+  height: 0;
+  width: 0;
+
+  border-right: 00px solid red;
+  border-left: 200px solid transparent;
+  border-bottom: 200px solid #9AFFFC;
 `
 
-export const TheRR = styled(motion.div)`
- position:fixed;
+export const YellowCircle = styled(motion.div)`
+  position:fixed;
+  width:250px;
+  height:250px;
 
- top:620px;
- left:80px;
+  border-radius:50%;
 
- width: 300px;
- height:200px;
+  background: #FBFF87;
 
- border:4px solid #FF6A6A;
+  top:850px;
+  left:-60px;
+
 `
+
+export const LargeRedRectangle = styled(motion.div)`
+  position:fixed;
+
+  top: 135px;
+  left:1000px;
+
+  width: 700px;
+  height: 50px;
+
+  border: 8px solid #FFABAB;
+`
+
+export const LargeOrangeCircle = styled(motion.div)`
+  position:fixed;
+
+  top:300px;
+  left:1400px;
+
+  height:350px;
+  width:350px;
+
+  border-radius: 50%;
+
+  background: #FFDD82;
+`
+
+export const FilledLightGreenTriangle = styled(motion.div)`
+  position:fixed;
+
+  top: 200px;
+  left: 1250px;
+
+  height: 0;
+  width: 0;
+
+  border-right: 00px solid red;
+  border-left: 150px solid transparent;
+  border-bottom: 150px solid #65EFC0;
+`
+
+export const PinkSquare = styled(motion.div)`
+  position:fixed;
+
+  height: 150px;
+  width: 150px;
+
+  top: 130px;
+  left:1770px;
+
+  background: #F9C1FF;
+`
+
+export const BlueSquare = styled(motion.div)`
+  position:fixed;
+
+  top: 750px;
+  left: 1600px;
+
+  height: 300px;
+  width: 300px;
+
+  border:10px solid #4A4AFB;
+`
+
+export const FilledPurpleTriangle = styled(motion.div)`
+  position:fixed;
+
+  top: 450px;
+  left: 1820px;
+
+  height: 0;
+  width: 0;
+
+  border-right: 00px solid red;
+  border-left: 200px solid transparent;
+  border-bottom: 200px solid #A967FF;
+`
+
+export const RedCircle = styled(motion.div)`
+  position:fixed;
+
+  height: 300px;
+  width: 300px;
+
+  border-radius:50%;
+
+  top: 800px;
+  left: 1100px;
+
+  border: 6px solid #FF6565;
+`
+
 
 //-------------------------------------------------------//
 //------------------BOUNCING BALL------------------------//

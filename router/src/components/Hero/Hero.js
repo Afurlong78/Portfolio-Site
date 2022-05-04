@@ -5,11 +5,22 @@ import styled from 'styled-components';
 import Styled from '../Global/GlobalStyle'
 import { motion } from 'framer-motion';
 import { 
-  TheFGT,
-  TheFBC,
-  TheFBR,
-  TheRR,
-
+  FilledGreenTriangle,
+  FilledBlueCircle,
+  BlueRectangle,
+  RedRectangle,
+  OrangeCircle, 
+  YellowRectangle,
+  PurpleRectangle,
+  FilledBlueTriangle,
+  YellowCircle,
+  LargeRedRectangle,
+  LargeOrangeCircle,
+  FilledLightGreenTriangle,
+  PinkSquare,
+  BlueSquare,
+  FilledPurpleTriangle,
+  RedCircle,
 } from './WallPaper'
 
 
@@ -25,6 +36,7 @@ const HeroTextContainer = styled(motion.div)`
   margin-top:-100px;
 
   h1{
+    font-family: 'Poppins', sans-serif;
     z-index:20;
     filter: drop-shadow(30px 20px 4px rgba(0, 0, 0, 0.2));
     font-weight:700;
@@ -56,8 +68,9 @@ const HeroTextContainer = styled(motion.div)`
   }
 
   p{ 
-    filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, 0.2))
-    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    filter: drop-shadow(30px 20px 4px rgba(0, 0, 0, 0.0));
+    font-weight: 500;
   }
 
   p{
@@ -135,15 +148,114 @@ function Hero() {
 
   const fadeLeft={
     hidden:{ opacity: 0, x:-900},
-    visible:{ opacity: 1, x: 0 }
+    visible:{ opacity: 1, x: 0 },
+  };
+
+  const filledGreenTriangle={
+    hidden:{ opacity: 0, y:-900},
+    visible:{ opacity: 1, y: 0 },
+    exit: { opacity:0, y:-900 }
+  };
+
+  const largeRedRectangle={
+    hidden:{ opacity: 0, y:-900},
+    visible:{ opacity: 1, y: 0 },
+    exit: { opacity:0, y:-900 }
+  };
+
+  const filledLightGreenTriangle={
+    hidden:{ opacity: 0, y:-900},
+    visible:{ opacity: 1, y: 0 },
+    exit: { opacity:0, y:-900 }
+  };
+
+  const filledBlueCircle={
+    hidden:{ opacity: 0, y:-900},
+    visible:{ opacity: 1, y: 0 },
+    exit: { opacity:0, y:-900 }
+  };
+
+  const orangeCircle={
+    hidden:{ opacity: 0, x:-900},
+    visible:{ opacity: 1, x: 0 },
+    exit: { opacity:0, x:-900 }
+  };
+
+  const purpleRectangle={
+    hidden:{ opacity: 0, x:-900},
+    visible:{ opacity: 1, x: 0 },
+    exit: { opacity:0, x:-900 }
+  };
+
+  const redRectangle={
+    hidden:{ opacity: 0, x:-900},
+    visible:{ opacity: 1, x: 0 },
+    exit: { opacity:0, x:-900 }
+  };
+
+  const yellowCircle={
+    hidden:{ opacity: 0, x:-900},
+    visible:{ opacity: 1, x: 0 },
+    exit: { opacity:0, x:-900 }
   };
 
   const fadeUp={
     hidden:{opacity:0, y:600},
     visible:{opacity:1, y:0},
-    transition:{ 
-      duration:0.1 
-    }
+  };
+
+  const blueTriangle={
+    hidden:{opacity:0, y:600},
+    visible:{opacity:1, y:0},
+    exit: { opacity:0, y:600 }
+  };
+
+  const blueRectangle={
+    hidden:{opacity:0, y:600},
+    visible:{opacity:1, y:0},
+    exit: { opacity:0, y:600 }
+  };
+
+  const redCircle={
+    hidden:{opacity:0, y:600},
+    visible:{opacity:1, y:0},
+    exit: { opacity:0, y:600 }
+  };
+
+  const blueSquare={
+    hidden:{opacity:0, y:600},
+    visible:{opacity:1, y:0},
+    exit: { opacity:0, y:600 }
+  };
+
+  const fadeRight={
+    hidden:{ opacity: 0, x: 900},
+    visible:{ opacity: 1, x: 0 },
+    exit: { opacity: 0, x: 900}
+  };
+  
+  const filledPinkSquare={
+    hidden:{ opacity: 0, x: 900},
+    visible:{ opacity: 1, x: 0 },
+    exit: { opacity: 0, x: 900}
+  };
+
+  const largeOrangeCircle={
+    hidden:{ opacity: 0, x: 900},
+    visible:{ opacity: 1, x: 0 },
+    exit: { opacity: 0, x: 900}
+  };
+
+  const filledPurpleTriangle={
+    hidden:{ opacity: 0, x: 900},
+    visible:{ opacity: 1, x: 0 },
+    exit: { opacity: 0, x: 900}
+  };
+
+  const yellowRectangle = {
+    hidden:{opacity: 0},
+    visible:{opacity: 1},
+    exit:{opacity: 0}
   }
 
   /* ANIMATIONS */
@@ -155,20 +267,134 @@ function Hero() {
       className=''
     >
       {/* BACKGROUND SHAPES */}
-        <TheFGT style={{rotate:'-140deg'}}
-          whileHover={{scale: 1.2 }}
+        <FilledGreenTriangle style={{rotate:'-140deg'}}
+          whileHover={{scale: 1.1, transition:{ duration: 0.2 } }}
+          initial='hidden'
+          animate='visible'
+          exit='exit'
+          variants={filledGreenTriangle}
+          transition={{ duration: 0.9 }}
         />
-        <TheFBC
-         whileHover={{scale: 1.2 }}
+        <FilledBlueCircle
+         whileHover={{scale: 1.2, transition:{ duration: 0.2 } }}
+         initial='hidden'
+         animate='visible'
+         exit='exit'
+         variants={filledBlueCircle}
+         transition={{ duration: 1.1 }}
         />
-        <TheFBR style={{rotate:'160deg'}}
-         whileHover={{scale: 1.2 }}
+        <BlueRectangle style={{rotate:'160deg'}}
+         whileHover={{scale: 1.1, transition:{ duration: 0.2 } }}
+         initial='hidden'
+         animate='visible'
+         exit='exit'
+         variants={blueRectangle}
+         transition={{ duration: 1.1 }}
         />
-        <TheRR style={{rotate:'40deg'}}
-         whileHover={{scale: 1.2 }}
+        <RedRectangle style={{rotate:'40deg'}}
+         whileHover={{scale: 1.2, transition:{ duration: 0.2 } }}
+         initial='hidden'
+         animate='visible'
+         exit='exit'
+         variants={redRectangle}
+         transition={{ duration: 0.9 }}
         />
-
-
+        <OrangeCircle 
+         whileHover={{scale: 1.2, transition:{ duration: 0.2 } }}
+         initial='hidden'
+         animate='visible'
+         exit='exit'
+         variants={orangeCircle}
+         transition={{ duration: 1.1 }}
+        />
+        <YellowRectangle
+         style={{ rotate:'120deg'}}
+         initial='hidden'
+         animate='visible'
+         exit='exit'
+         variants={yellowRectangle}
+         transition={{ duration: 0.8 }}
+        />
+        <PurpleRectangle style={{ rotate:'-20deg'}}
+         whileHover={{scale: 1.2, transition:{ duration: 0.2 } }}
+         initial='hidden'
+         animate='visible'
+         exit='exit'
+         variants={purpleRectangle}
+         transition={{ duration: 1.3 }}
+        />
+        <FilledBlueTriangle style={{ rotate:'-120deg'}}
+         whileHover={{scale: 1.2, transition:{ duration: 0.2 } }}
+         initial='hidden'
+         animate='visible'
+         exit='exit'
+         variants={blueTriangle}
+         transition={{ duration: 0.9 }}
+        />
+        <YellowCircle
+         whileHover={{scale: 1.2, transition:{ duration: 0.2 } }}
+         initial='hidden'
+         animate='visible'
+         exit='exit'
+         variants={yellowCircle}
+         transition={{ duration: 1.1 }}
+        />
+        <LargeRedRectangle style={{ rotate:'10deg'}}
+         whileHover={{scale: 1.1, transition:{ duration: 0.2 } }}
+         initial='hidden'
+         animate='visible'
+         exit='exit'
+         variants={largeRedRectangle}
+         transition={{ duration: 1.4 }}
+        />
+        <LargeOrangeCircle
+         whileHover={{scale: 1.1, transition:{ duration: 0.2 } }}
+         initial='hidden'
+         animate='visible'
+         exit='exit'
+         variants={largeOrangeCircle}
+         transition={{ duration: 1.4 }}
+        />
+        <FilledLightGreenTriangle style={{ rotate:'80deg'}}
+         whileHover={{scale: 1.2, transition:{ duration: 0.2 } }}
+         initial='hidden'
+         animate='visible'
+         exit='exit'
+         variants={filledLightGreenTriangle}
+         transition={{ duration: 1.3 }}
+        />
+        <PinkSquare style={{ rotate:'20deg'}}
+         whileHover={{scale: 1.2, transition:{ duration: 0.2 } }}
+         initial='hidden'
+         animate='visible'
+         exit='exit'
+         variants={filledPinkSquare}
+         transition={{ duration: 1.6 }}
+        />
+        <BlueSquare style={{ rotate:'40deg'}}
+         whileHover={{scale: 1.2, transition:{ duration: 0.2 } }}
+         initial='hidden'
+         animate='visible'
+         exit='exit'
+         variants={blueSquare}
+         transition={{ duration: 1.6 }}
+        />
+        <FilledPurpleTriangle style={{ rotate:'170deg'}}
+         whileHover={{scale: 1.2, transition:{ duration: 0.2 } }}
+         initial='hidden'
+         animate='visible'
+         exit='exit'
+         variants={filledPurpleTriangle}
+         transition={{ duration: 1.6 }}
+        />
+        <RedCircle
+         whileHover={{scale: 1.2, transition:{ duration: 0.2 } }}
+         initial='hidden'
+         animate='visible'
+         exit='exit'
+         variants={redCircle}
+         transition={{ duration: 1.4 }}
+        />
       {/* BACKGROUND SHAPES */}
 
     <HeroTextContainer className=''>
